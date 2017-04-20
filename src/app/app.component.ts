@@ -10,6 +10,10 @@ export class AppComponent{
 	title : string;
 	heroes: Hero[];
 	myHero : Hero;
+	anotherHero: Hero = {
+		id: 17,
+		name: 'Wonder Woman'
+	};
 
 	constructor(){
 		this.title ='Tour of Heroes';
