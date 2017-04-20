@@ -1,0 +1,14 @@
+<h3>{{ className }}</h3>
+
+<input #newHeroine
+	  (keyup.enter)="addHeroine(newHeroine.value); newHeroine.value='' "
+	  (blur)="addHeroine(newHeroine.value); newHeroine.value='' ">
+
+<button (click)="addHeroine(newHeroine.value)">Add</button>
+
+<ul>
+	<li *ngFor="let h of heroines">
+		{{ h.id }}
+		{{ h.name }}
+	</li>
+</ul>

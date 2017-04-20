@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
+import { Keyupv1Component } from "./UserInput/keyupv1/keyupv1.component";
+import { Heroine } from "./heroine";
 
 @Component({
 	selector: 'app-root',
@@ -14,6 +16,7 @@ export class AppComponent{
 		id: 17,
 		name: 'Wonder Woman'
 	};
+	heroine: Heroine;
 
 	constructor(){
 		this.title ='Tour of Heroes';
@@ -25,5 +28,8 @@ export class AppComponent{
 					 new Hero(20, 'Mr. Incredible')
 					];
 		this.myHero = this.heroes[0];
+
+		this.heroine = new Heroine(45, 'Spiderwoman');
+
 	}
 }

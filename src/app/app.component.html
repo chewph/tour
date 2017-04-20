@@ -3,24 +3,43 @@
 	My favourite hero is: {{myHero.name}}
 </h2>
 
+<p>My Heroine is: {{heroine.name}}</p>
+
 <p>Heroes:</p>
 <ul>
-	<!--<li *ngFor="let hero of heroes">
-		{{hero}}
-	</li>-->
 
 	<li *ngFor="let hero of heroes">
 		{{ hero.name }}
 	</li>
 
 </ul>
-<div><label>id: </label>{{ anotherHero.id }}</div>
+<p *ngIf="heroes.length > 3">There are many heroes!</p>
+
+<br>
+<hr>
 <div>
+	<h3>AnotherHero Component</h3>
+	<label>id: </label>{{ anotherHero.id }}
+
+	<br>
+
 	<label>name: </label>
 	<input [(ngModel)]="anotherHero.name" placeholder="name">
 </div>
+<br>
 
-<p *ngIf="heroes.length > 3">There are many heroes!</p>
-
-
+<hr>
+<h3>Click Me</h3>
 <click-me></click-me>
+<hr>
+
+<h3>Key up</h3>
+<keyupv1></keyupv1>
+<br>
+<hr>
+<h3>Loop Back #box template variable reference</h3>
+<loopback></loopback>
+<br>
+<hr>
+<little-tour></little-tour>
+
