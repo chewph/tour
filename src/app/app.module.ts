@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ClickmeComponent } from './UserInput/clickme/clickme.component';
+import { ClickMeComponent } from './UserInput/clickme/clickme.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		ClickmeComponent
+		ClickMeComponent
 	],
 	imports: [
 		BrowserModule,

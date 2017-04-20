@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './clickme.component.html',
 	styleUrls: [ './clickme.component.css' ]
 })
-export class ClickmeComponent implements OnInit{
+export class ClickMeComponent implements OnInit{
 	clickMessage = 'No click!';
 
 	constructor(){
