@@ -24,7 +24,8 @@
 	<br>
 
 	<label>name: </label>
-	<input [(ngModel)]="anotherHero.name" placeholder="name">
+	<input  (keyup)="printHeroName()"
+		   [(ngModel)]="anotherHero.name" placeholder="name">
 </div>
 <br>
 

@@ -32,4 +32,8 @@ export class AppComponent{
 		this.heroine = new Heroine(45, 'Spiderwoman');
 
 	}
+
+	printHeroName(){
+		console.log(this.anotherHero.name);
+	}
 }
