@@ -15,7 +15,7 @@ export class ClickMeComponent implements OnInit{
 	}
 
 	onClickMe(){
-		this.clickMessage = 'You are my hero!';
+		this.clickMessage = 'You are my heroDetail!';
 	}
 
 }

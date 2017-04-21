@@ -1,0 +1,17 @@
+<div *ngIf="heroDetail">
+	<h2>Hero Details</h2>
+	<div><label>id: </label>{{ heroDetail.id }}</div>
+	<div><label>name: </label>
+		<input [(ngModel)]="heroDetail.name" placeholder="name">
+	</div>
+</div>
+
+<div *ngIf="heroesDetailArr">
+	<hr>
+	<h2>Passed from heroesArr of AppComponent</h2>
+	<ul>
+		<li *ngFor="let hero of heroesDetailArr">
+			{{ hero.id }} {{ hero.name }}
+		</li>
+	</ul>
+</div>
