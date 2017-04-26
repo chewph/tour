@@ -1,0 +1,98 @@
+<h1> {{title}}</h1>
+<h2>
+	(1) My favourite hero is: {{myHero.name}}
+</h2>
+
+<!--heroine from heroine: Heroine-->
+<p>(2) My Heroine is: {{heroine.name}}</p>
+
+<p>(3) Heroes: looping through heroes of HeroesComponent</p>
+<ul>
+	<!--heroes from HeroesComponent-->
+	<li *ngFor="let hero of heroes">
+		{{ hero.name }}
+	</li>
+
+</ul>
+Using if *ngIf="heroes.length > 3
+<div *ngIf="heroes.length > 3">There are many heroes!</div>
+Using if *ngIf="heroes.length > 3
+
+<hr>
+<div>
+	<h3>(3) AnotherHero </h3>
+	- another way of initialising variable, input keyup, bind to component property
+	<br>
+	<label>id: </label>{{ anotherHero.id }}
+
+	<br>
+
+	<label>name: </label>
+	<input  (keyup)="printHeroName()"
+		   [(ngModel)]="anotherHero.name" placeholder="name">
+</div>
+<br>
+
+<hr>
+<h3>(4) Click Me - ClickMeComponent</h3>
+<click-me></click-me>
+<hr>
+
+<h3>(5) Key up - KeyUpv1Component</h3>
+input (keyup)="onKey($event)"
+<keyupv1></keyupv1>
+<br>
+<hr>
+<h3>Loop Back #box template variable reference</h3>
+ - Referring to input field by name, #box
+<loopback></loopback>
+<br>
+<hr>
+<little-tour></little-tour>
+
+<hr>
+<h2>My Heroes using heroesArr and HEROES CONST</h2>
+<ul class="heroes">
+	<li *ngFor="let hero of heroesArr" (click)="onSelect(hero)"
+	    [class.selected]="hero === selectedHero">
+		<span class="badge">{{ hero.id }}</span> {{ hero.name }}
+
+	</li>
+</ul>
+
+<div *ngIf="selectedHero">
+	<div><label>id: </label>{{ selectedHero.id }}</div>
+	<div><label>name: </label>
+		<input [(ngModel)]="selectedHero.name" placeholder="name">
+	</div>
+</div>
+
+
+
+<hr>
+<h2>My Heroes using Master/Detail</h2>
+<ul class="heroes">
+	<li *ngFor="let hero of heroesArr" (click)="onSelect(hero)"
+	    [class.selected]="hero === selectedHero">
+		<span class="badge">{{ hero.id }}</span> {{ hero.name }}
+	</li>
+</ul>
+<hero-detail [heroDetail]="selectedHero"></hero-detail>
+<hero-detail [heroesArr]="heroesArr"></hero-detail>
+
+<!--1. selectedHero is variable in AppComponent class which is assigned when click onSelect(hero) is triggered
+2. [heroDetail]="selectedHero" assigns selectedHero to HeroDetailComponent's hero object which in declared with @Input
+3. Subsequently, hero-detail.component.html which contains the {{heroDetail}} is rendered.
+4. In short, onClick, AppComponent.hero is passed to AppComponent.selectedHero via onSelect method and then binded to
+HeroDetail.heroDetail-->
+
+<hr>
+<h2>Using MockHeroes from HeroService/Detail</h2>
+<ul class="heroes">
+	<li *ngFor="let hero of mockHeroes" (click)="onSelect(hero)"
+	    [class.selected]="hero === selectedHero">
+		<span class="badge">{{ hero.id }}</span> {{ hero.name }}
+
+	</li>
+</ul>
+

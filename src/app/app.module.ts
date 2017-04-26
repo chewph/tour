@@ -9,6 +9,8 @@ import { Keyupv1Component } from './UserInput/keyupv1/keyupv1.component';
 import { LoopbackComponent } from './UserInput/loopback/loopback.component';
 import { LittleTourComponent } from './UserInput/little-tour/little-tour.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroService } from "./hero.service";
 
 @NgModule({
 	declarations: [
@@ -17,14 +19,15 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 		Keyupv1Component,
 		LoopbackComponent,
 		LittleTourComponent,
-		HeroDetailComponent
+		HeroDetailComponent,
+		HeroesComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule
 	],
-	providers: [],
+	providers: [ HeroService ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule{
