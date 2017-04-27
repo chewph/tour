@@ -1,4 +1,12 @@
-<h3>{{ className }}</h3>
+<h3>(6) {{ className }}</h3>
+Using LittleTourComponent to <br>
+
+1. Create heroines array in constructor - new Heroine class <br>
+2. Name #newHeroine input <br>
+3. Use keyup.enter, blur and button (click) events to add new heroine using addHeroine method <br>
+4. Display heroines using *ngFor <br>
+5. Add new heroine to heroines array using push and with heroines.length to increase list numbering <br>
+6. Test out console logging. <br> <br>
 
 <input #newHeroine
 	  (keyup.enter)="addHeroine(newHeroine.value); newHeroine.value='' "

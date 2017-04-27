@@ -21,11 +21,11 @@ export class LittleTourComponent implements OnInit{
 	ngOnInit(){
 	}
 
-	addHeroine(newHeroine: string){
-		if (newHeroine){
-			this.heroines.push(new Heroine(this.heroines.length+1, newHeroine));
+	addHeroine(newHeroineName: string){
+		if (newHeroineName){
+			this.heroines.push(new Heroine(this.heroines.length+1, newHeroineName));
 		} else {
-			console.log("Empty String: " + newHeroine);
+			console.log("Empty String: " + newHeroineName);
 		}
 	}
 
