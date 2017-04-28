@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
-import { Keyupv1Component } from "../UserInput/keyupv1/keyupv1.component";
-import { Heroine } from "../heroine";
-import { MOCKHEROES } from '../mock-heroes';
+import { Hero } from '../classes/hero';
+import { Keyupv1Component } from "../user-input/keyup/keyupv1.component";
+import { Heroine } from "../classes/heroine";
+import { MOCKHEROES } from '../classes/mock-heroes';
 import { HeroService } from '../hero.service';
+
 
 @Component({
 	selector: 'my-heroes',
@@ -12,34 +13,16 @@ import { HeroService } from '../hero.service';
 	providers: [HeroService]
 })
 export class HeroesComponent implements OnInit{
-	myHero: Hero;				// (1)
-	heroine: Heroine;			// (2)
 	anotherHero: Hero = {		// (3)
 		id: 17,
 		name: 'Wonder Woman'
 	};
 	mockHeroes: Hero[];
-	heroesArr = HEROES;
-
 	selectedHero:  Hero;
-	title: string;
-	heroes: Hero[];
-
-
 
 
 	constructor(private heroService: HeroService){
-
-		this.title = 'Tour of Heroes';
 		//this.heroes = ['Windstorm', 'Superman', 'Batman', 'Fronzon', 'Spiderman'];
-
-		this.heroes = [ new Hero(1, 'Superman'),
-			new Hero(13, 'Spiderman'),
-			new Hero(15, 'Batman'),
-			new Hero(20, 'Mr. Incredible')
-		];
-		this.myHero = this.heroes[ 0 ];
-		this.heroine = new Heroine(45, 'Spiderwoman');
 
 	}
 
@@ -74,3 +57,5 @@ const HEROES: Hero[] = [
 	{ id: 19, name: 'Magma' },
 	{ id: 20, name: 'Tornado' }
 ];
+
+

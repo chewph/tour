@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { Keyupv1Component } from "./UserInput/keyupv1/keyupv1.component";
-import { Heroine } from "./heroine";
-import { MOCKHEROES } from './mock-heroes';
+import { Component } from '@angular/core';
+import { Hero } from './classes/hero';
+import { Keyupv1Component } from "./user-input/keyup/keyupv1.component";
+import { Heroine } from "./classes/heroine";
+import { MOCKHEROES } from './classes/mock-heroes';
 import { HeroService } from './hero.service';
+import { GetComponentPropertyComponent } from './simple-eg/get-component-property/get-component-property.component';
 
 @Component({
 	selector: 'my-app',
@@ -12,7 +13,11 @@ import { HeroService } from './hero.service';
 	providers: [HeroService]
 })
 export class AppComponent{
-	title: 'Tour of Heroes';
+	appName: string;
+
+	constructor(){
+		this.appName = 'Tour of Heroes Tutorial';
+	}
 
 }
 

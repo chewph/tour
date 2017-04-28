@@ -3,8 +3,8 @@
  */
 
 import  { Injectable } from '@angular/core';
-import { Hero } from './hero';
-import { MOCKHEROES } from './mock-heroes';
+import { Hero } from './classes/hero';
+import { MOCKHEROES } from './classes/mock-heroes';
 
 
 /*

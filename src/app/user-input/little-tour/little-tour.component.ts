@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Heroine } from '../../heroine';
+import { Heroine } from '../../classes/heroine';
 
 @Component({
 	selector: 'little-tour',

@@ -1,2 +1,37 @@
-<h1> {{ title }} </h1>
-<my-heroes></my-heroes>
+<h1> {{ appName }} </h1>
+
+<div class="aTextDecor">
+	<ul>
+		<li>
+			<h3><a routerLink="/HerosList">Main Heroes List</a></h3>
+			<p>The main tutorial</p>
+		</li>
+		<li>
+			<h3><a routerLink="/GetComponentProperty">Get component property</a></h3>
+			<p>
+				1. Declaring and instantiating objects from plain classes (Hero and Heorine) <br>
+				2. Using of arrays. <br>
+				3. Accessing created objects from html
+			</p>
+		</li>
+		<li>
+			<h3><a routerLink="/DoForLoop">Looping and if statements</a></h3>
+			<p>
+				1. Creating and initialising Heroes array <br>
+				2. Use *ngFor for looping<br>
+				3. Use *ngIf and length attribute to check for size of array
+			</p>
+		</li>
+		<li>
+			<a routerLink="/Click me">Click me</a>
+			<h3>Click me</h3>
+			<p>Lorem ipsum dolor sit amet...</p>
+		</li>
+	</ul>
+</div>
+
+<hr>
+
+<div>
+	<router-outlet></router-outlet>
+</div>

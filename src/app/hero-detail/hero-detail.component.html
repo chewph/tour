@@ -1,17 +1,16 @@
 <div *ngIf="heroDetail">
-	<h2>Hero Details</h2>
+	<h3>Hero Details</h3>
 	<div><label>id: </label>{{ heroDetail.id }}</div>
 	<div><label>name: </label>
 		<input [(ngModel)]="heroDetail.name" placeholder="name">
 	</div>
 </div>
 
-<div *ngIf="heroesDetailArr">
-	<hr>
-	<h2>Passed from heroesArr of AppComponent</h2>
+<!--<div *ngIf="heroesDetailArr">
+	<h3>Passed from heroesArr of HeroesComponent</h3>
 	<ul>
 		<li *ngFor="let hero of heroesDetailArr">
 			{{ hero.id }} {{ hero.name }}
 		</li>
 	</ul>
-</div>
+</div>-->

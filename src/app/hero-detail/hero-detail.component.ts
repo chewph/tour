@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { Hero } from '../classes/hero';
+
 
 @Component({
 	selector: 'hero-detail',
@@ -7,8 +8,8 @@ import { Hero } from '../hero';
 	styleUrls: [ './hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit{
-	@Input('heroDetail') heroDetail: Hero;
-	@Input('heroesArr') heroesDetailArr: Hero;
+	@Input('heroesArrInput') heroesDetailArr: Hero;
+	@Input('heroDetailInput') heroDetail: Hero;
 
 	constructor(){
 	}
