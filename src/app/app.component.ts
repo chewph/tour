@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from './classes/hero';
-import { Keyupv1Component } from "./user-input/keyup/keyupv1.component";
+import { KeyupComponent } from "./user-input/keyup/keyup.component";
 import { Heroine } from "./classes/heroine";
 import { MOCKHEROES } from './classes/mock-heroes';
 import { HeroService } from './hero.service';

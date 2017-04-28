@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ClickMeComponent } from './user-input/clickme/clickme.component';
-import { Keyupv1Component } from './user-input/keyup/keyupv1.component';
+import { KeyupComponent } from './user-input/keyup/keyup.component';
 import { LoopbackComponent } from './user-input/loopback/loopback.component';
 import { LittleTourComponent } from './user-input/little-tour/little-tour.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -14,18 +14,24 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroService } from "./hero.service";
 import { GetComponentPropertyComponent } from './simple-eg/get-component-property/get-component-property.component';
 import { ForloopEgComponent } from './simple-eg/forloop-eg/forloop-eg.component';
+import { BindPropertyComponent } from './simple-eg/bind-property/bind-property.component';
+import { MasterComponent } from './master-detail/master/master.component';
+import { DetailComponent } from './master-detail/detail/detail.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		ClickMeComponent,
-		Keyupv1Component,
+		KeyupComponent,
 		LoopbackComponent,
 		LittleTourComponent,
 		HeroDetailComponent,
 		HeroesComponent,
 		GetComponentPropertyComponent,
-		ForloopEgComponent
+		ForloopEgComponent,
+		BindPropertyComponent,
+		MasterComponent,
+		DetailComponent
 	],
 	imports: [
 		BrowserModule,
@@ -45,8 +51,28 @@ import { ForloopEgComponent } from './simple-eg/forloop-eg/forloop-eg.component'
 				component: ForloopEgComponent
 			},
 			{
-				path: 'Click me',
+				path: 'DoDataBind',
+				component: BindPropertyComponent
+			},
+			{
+				path: 'ClickMe',
 				component: ClickMeComponent
+			},
+			{
+				path: 'KeyupAnyEvent',
+				component: KeyupComponent
+			},
+			{
+				path: 'LoopBack',
+				component: LoopbackComponent
+			},
+			{
+				path: 'LittleTour',
+				component: LittleTourComponent
+			},
+			{
+				path: 'Master-Detail',
+				component: MasterComponent
 			}
 		])
 	],

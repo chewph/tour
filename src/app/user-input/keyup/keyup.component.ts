@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'keyupv1',
-	templateUrl: './keyupv1.component.html',
-	styleUrls: [ './keyupv1.component.css' ]
+	selector: 'keyup',
+	templateUrl: './keyup.component.html',
+	styleUrls: [ './keyup.component.css' ]
 })
-export class Keyupv1Component {
+export class KeyupComponent {
 	values = '';
 
 	constructor(){

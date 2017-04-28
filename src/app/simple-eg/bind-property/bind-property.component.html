@@ -1,0 +1,9 @@
+<div>
+	- another way of initialising variable, input keyup, bind to component property
+	<br>
+	<label>id: </label>{{ anotherHero.id }}
+
+	<label>name: </label>
+	<input  (keyup)="printHeroName()"
+		   [(ngModel)]="anotherHero.name" placeholder="name">
+</div>
