@@ -14,6 +14,7 @@ import { MOCKHEROES } from '../../classes/mock-heroes';
 export class MasterComponent implements OnInit {
 	selectedHero:  Hero;
 	heroesArr = HEROES;
+	showLittleTour : boolean = false;
 
 	constructor(){
 		//this.heroes = ['Windstorm', 'Superman', 'Batman', 'Fronzon', 'Spiderman'];
@@ -24,6 +25,15 @@ export class MasterComponent implements OnInit {
 
 	}
 
+	onSelectShowLittleTour(){
+		console.log(this.showLittleTour);
+		if (this.showLittleTour){
+			this.showLittleTour = false;
+		} else {
+			this.showLittleTour = true;
+		}
+
+	}
 	onSelect(hero: Hero): void {
 		this.selectedHero = hero;
 	}

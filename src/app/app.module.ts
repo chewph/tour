@@ -17,6 +17,7 @@ import { ForloopEgComponent } from './simple-eg/forloop-eg/forloop-eg.component'
 import { BindPropertyComponent } from './simple-eg/bind-property/bind-property.component';
 import { MasterComponent } from './master-detail/master/master.component';
 import { DetailComponent } from './master-detail/detail/detail.component';
+import { ShowHideComponent } from './simple-eg/show-hide/show-hide.component';
 
 @NgModule({
 	declarations: [
@@ -31,7 +32,8 @@ import { DetailComponent } from './master-detail/detail/detail.component';
 		ForloopEgComponent,
 		BindPropertyComponent,
 		MasterComponent,
-		DetailComponent
+		DetailComponent,
+		ShowHideComponent
 	],
 	imports: [
 		BrowserModule,
@@ -41,6 +43,10 @@ import { DetailComponent } from './master-detail/detail/detail.component';
 			{
 				path: 'HerosList',
 				component: HeroesComponent
+			},
+			{
+				path: 'ShowHide',
+				component: ShowHideComponent
 			},
 			{
 				path: 'GetComponentProperty',

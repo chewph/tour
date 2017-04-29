@@ -2,6 +2,7 @@
 <!--========================================================================================================-->
 <h2>My Heroes using Master (list) - Detail (record)</h2>
 <h3>Master - MasterComponent</h3>
+<input type="checkbox" (change)="onSelectShowLittleTour()">Show Little Tour
 <ul class="heroes">
 	<li *ngFor="let hero of heroesArr" (click)="onSelect(hero)"
 	    [class.selected]="hero === selectedHero">
@@ -25,8 +26,12 @@
 4. In short, onClick, AppComponent.hero is passed to AppComponent.selectedHero via onSelect method and then binded to
 HeroDetail.heroDetail
 -->
-<h3>Detail - DetailComponent</h3>
+
 <!--<hero-detail [heroesArrInput]="heroesArr"></hero-detail>-->
 <detail [heroDetailInput]="selectedHero"></detail>
-<!--heroesArr is from HerosComponent-->
+<hr>
+<div *ngIf="showLittleTour">
+	<little-tour [heroesArrInput]="heroesArr">Passing selected Hero to LittleHero</little-tour>
+</div>
+
 

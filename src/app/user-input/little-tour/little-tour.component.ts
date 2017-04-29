@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Heroine } from '../../classes/heroine';
+import { Hero } from "../../classes/hero";
 
 @Component({
 	selector: 'little-tour',
@@ -7,6 +8,9 @@ import { Heroine } from '../../classes/heroine';
 	styleUrls: [ './little-tour.component.css' ]
 })
 export class LittleTourComponent implements OnInit{
+	//@Input('heroDetailInput') heroDetail: Hero;
+	@Input('heroesArrInput') heroesDetailArr: Hero;
+
 	heroines: Heroine[];
 	className = 'Little Tour of Heroines';
 
