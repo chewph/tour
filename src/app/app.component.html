@@ -1,14 +1,16 @@
 <h1> {{ appName }} </h1>
 
+<section id="top-section"></section>
 <div class="aTextDecor">
 	<ul>
 		<li>
-			<h3><a routerLink="/HerosList">Main Heroes List</a></h3>
-			<p>The main tutorial</p>
+			<h3><a routerLink="/HerosList" >Main Heroes List</a></h3>
+			<p>The main tutorial - heroes/HeroesComponent and hero-detail/HeroDetailsComponent</p>
 		</li>
 		<li>
 			<h3><a routerLink="/ShowHide">*ngIf else example using checkbox</a></h3>
 			<p>
+				<b>simple-eg/ShowHideComponent</b> <br>
 				1. Using checkbox to set and change value of ShowHideComponent<br>
 				2. *ngIf else to show alternate templates
 
@@ -17,6 +19,7 @@
 		<li>
 			<h3><a routerLink="/GetComponentProperty">Get component property</a></h3>
 			<p>
+				<b>simple-eg/GetComponentPropertyComponent</b> <br>
 				1. Declaring and instantiating objects from plain classes (Hero and Heorine) <br>
 				2. Using of arrays. <br>
 				3. Accessing created objects from html
@@ -25,6 +28,7 @@
 		<li>
 			<h3><a routerLink="/DoForLoop">Looping and if statements</a></h3>
 			<p>
+				<b>GetComponentPropertyComponent</b> <br>
 				1. Creating and initialising Heroes array <br>
 				2. Use *ngFor for looping<br>
 				3. Use *ngIf and length attribute to check for size of array
@@ -33,6 +37,7 @@
 		<li>
 			<h3><a routerLink="/DoDataBind">Bind data to HTML</a></h3>
 			<p>
+				<b>simple-eg/BindPropertyComponent</b> <br>
 				1. Alternate way of instantiating and initialising property<br>
 				2. 2-way bind input to component property.<br>
 				3. Print to console on keyup to see effect of binding using console.log.
@@ -40,22 +45,30 @@
 		</li>
 		<li>
 			<h3><a routerLink="/ClickMe">Click event</a></h3>
-			<p>Click event using (click) </p>
+			<p>
+				<b>user-input/ClickMeComponent</b> <br>
+				Click event using (click)
+			</p>
 		</li>
 		<li>
 			<h3><a routerLink="/KeyupAnyEvent">OnKey generated event</a></h3>
 			<p>
+				<b>user-input/KeyUpcomponent</b> <br>
 				1. Using onKey to refer to input that generated keyup event<br>
 				2. event.target is the reference to the input text that raised the event.<br>
 			</p>
 		</li>
 		<li>
 			<h3><a routerLink="/LoopBack">Loop Back</a></h3>
-			<p>Loop back</p>
+			<p>
+				<b>user-input/LoopBack</b> <br>
+				Loop back
+			</p>
 		</li>
 		<li>
 			<h3><a routerLink="/LittleTour">Little Tour Of Heroines</a></h3>
 			<p>
+				<b>user-input/LittleTourComponent</b> <br>
 				1. Create heroines array in constructor - new Heroine class <br>
 				2. Name #newHeroine input <br>
 				3. Use keyup.enter, blur and button (click) events to add new heroine using addHeroine method <br>
@@ -67,9 +80,17 @@
 		<li>
 			<h3><a routerLink="/Master-Detail">Master - Detail Components</a></h3>
 			<p>
+				<b>master-detail/master/MasterComponent and ./detail/DetailComponent</b> <br>
 				1. Using CSS for list display and selected row <br>
 				2. Bind component with html input using ngModel- selected hero
 				3. Using @Input directive to pass data across components
+			</p>
+		</li>
+		<li>
+			<h3><a routerLink="/ScrollTo">Scroll To</a></h3>
+			<p>
+				<b>simple-eg/ScrollToComponent</b> <br>
+				How to scroll to anchor in page
 			</p>
 		</li>
 
@@ -78,6 +99,8 @@
 
 <hr>
 
-<div>
+<a scrollTo href="#top-section">Back to top</a>
+<section id="display-section"></section>
+<div id="display">
 	<router-outlet></router-outlet>
 </div>

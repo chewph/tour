@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../../classes/hero';
 import { KeyupComponent } from "../../user-input/keyup/keyup.component";
 import { Heroine } from "../../classes/heroine";
-import { MOCKHEROES } from '../../classes/mock-heroes';
+import { HEROS_DATA } from '../../classes/mock-heroes';
 
 
 

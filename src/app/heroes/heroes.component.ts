@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../classes/hero';
 import { KeyupComponent } from "../user-input/keyup/keyup.component";
 import { Heroine } from "../classes/heroine";
-import { MOCKHEROES } from '../classes/mock-heroes';
+import { HEROS_DATA } from '../classes/mock-heroes';
 import { HeroService } from '../hero.service';
 
 
@@ -13,7 +13,8 @@ import { HeroService } from '../hero.service';
 	providers: [HeroService]
 })
 export class HeroesComponent implements OnInit{
-	mockHeroes: Hero[];
+	mockHeroes: Hero[]; // could be: mockHeroes = this.heroService.getMockHeroesAsynService();
+	heros : Hero[];
 	selectedHero:  Hero;
 	heroesArr = HEROES;
 
@@ -23,14 +24,26 @@ export class HeroesComponent implements OnInit{
 	}
 
 	ngOnInit(): void{
+		// choose to use heros or mockHeroes
 		this.getMockHeroes();
+		//this.getHeros();
+		//this.getHerosAsyn();
 	}
 
 	getMockHeroes(): void {
-		//this.mockHeroes = this.heroService.getMockHeroes();
-		this.heroService.getMockHeroes().then(mockHeroes => this.mockHeroes = mockHeroes);
+		//this.mockHeroes = this.heroService.getMockHeroesAsynService();
+		this.heroService.getMockHeroesAsynService().then(mockHeroes => this.mockHeroes = mockHeroes);
 		//this.heroService.getHeroesSlowly().then(mockHeroes => this.mockHeroes = mockHeroes);
 	}
+
+	getHeros(): void {
+		this.heros = this.heroService.getHeros();
+	}
+
+	getHerosAsyn(): void {
+		this.heroService.getHerosAsynService().then(heros => this.heros = heros);
+	}
+
 
 	onSelect(hero: Hero): void {
 		this.selectedHero = hero;

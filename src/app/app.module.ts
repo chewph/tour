@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { ROUTING } from './classes/routes';
 import { AppComponent } from './app.component';
 import { ClickMeComponent } from './user-input/clickme/clickme.component';
 import { KeyupComponent } from './user-input/keyup/keyup.component';
@@ -18,6 +19,8 @@ import { BindPropertyComponent } from './simple-eg/bind-property/bind-property.c
 import { MasterComponent } from './master-detail/master/master.component';
 import { DetailComponent } from './master-detail/detail/detail.component';
 import { ShowHideComponent } from './simple-eg/show-hide/show-hide.component';
+import { ScrollToComponent } from './simple-eg/scroll-to/scroll-to.component';
+import { ScrollToModule } from 'ng2-scroll-to';
 
 @NgModule({
 	declarations: [
@@ -33,57 +36,57 @@ import { ShowHideComponent } from './simple-eg/show-hide/show-hide.component';
 		BindPropertyComponent,
 		MasterComponent,
 		DetailComponent,
-		ShowHideComponent
+		ShowHideComponent,
+		ScrollToComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		RouterModule.forRoot([
-			{
-				path: 'HerosList',
-				component: HeroesComponent
-			},
-			{
-				path: 'ShowHide',
-				component: ShowHideComponent
-			},
-			{
-				path: 'GetComponentProperty',
-				component: GetComponentPropertyComponent
-			},
-			{
-				path: 'DoForLoop',
-				component: ForloopEgComponent
-			},
-			{
-				path: 'DoDataBind',
-				component: BindPropertyComponent
-			},
-			{
-				path: 'ClickMe',
-				component: ClickMeComponent
-			},
-			{
-				path: 'KeyupAnyEvent',
-				component: KeyupComponent
-			},
-			{
-				path: 'LoopBack',
-				component: LoopbackComponent
-			},
-			{
-				path: 'LittleTour',
-				component: LittleTourComponent
-			},
-			{
-				path: 'Master-Detail',
-				component: MasterComponent
-			}
-		])
+		ScrollToModule.forRoot(),
+		ROUTING
+		/*RouterModule.forRoot([
+			{ path: 'HerosList', component: HeroesComponent },
+			{ path: 'ShowHide', component: ShowHideComponent },
+			{ path: 'GetComponentProperty', component: GetComponentPropertyComponent },
+			{ path: 'DoForLoop', component: ForloopEgComponent },
+			{ path: 'DoDataBind', component: BindPropertyComponent },
+			{ path: 'ClickMe', component: ClickMeComponent },
+			{ path: 'KeyupAnyEvent', component: KeyupComponent },
+			{ path: 'LoopBack', component: LoopbackComponent },
+			{ path: 'LittleTour', component: LittleTourComponent },
+			{ path: 'Master-Detail', component: MasterComponent },
+			{ path: 'ScrollTo', component: ScrollToComponent }
+		])*/
 	],
 	providers: [ HeroService ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule{
 }
+
+/*
+ const routes: Routes = [
+ // basic routes
+ { path: '', redirectTo: 'home', pathMatch: 'full' },
+ { path: 'home', component: HomeComponent },
+ { path: 'about', component: AboutComponent },
+ { path: 'contact', component: ContactComponent },
+ { path: 'contactus', redirectTo: 'contact' },
+
+ // authentication demo
+ { path: 'login', component: LoginComponent },
+ {
+ path: 'protected',
+ component: ProtectedComponent,
+ canActivate: [ LoggedInGuard ]
+ },
+
+ // nested
+ {
+ path: 'products',
+ component: ProductsComponent,
+ children: childRoutes
+ }
+ ];
+ */

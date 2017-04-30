@@ -1,10 +1,6 @@
-/**
- * Created by cph on 21/4/17.
- */
-
 import  { Injectable } from '@angular/core';
 import { Hero } from './classes/hero';
-import { MOCKHEROES } from './classes/mock-heroes';
+import { HEROS_DATA } from './classes/mock-heroes';
 
 
 /*
@@ -16,14 +12,30 @@ import { MOCKHEROES } from './classes/mock-heroes';
 @Injectable()
 
 export class HeroService{
-	getMockHeroes(): Promise<Hero[]>{
-		return Promise.resolve(MOCKHEROES);
+	heros : Hero[] = HEROS_DATA;
+
+	/*
+		export const HEROS_DATA: Hero[] = [
+			{id: 11, name: 'Mr. Nice'},
+		]
+	*/
+	getMockHeroesAsynService(): Promise<Hero[]>{
+		return Promise.resolve(HEROS_DATA);
+	}
+
+	getHerosAsynService(): Promise<Hero[]>{
+		return Promise.resolve(HEROS_DATA);
+	}
+	// Alternate method that uses heros property
+	getHeros(): Hero[]{
+		// or return HEROS_DATA;
+		return this.heros;
 	}
 
 	getHeroesSlowly(): Promise<Hero[]>{
 		return new Promise(resolve =>{
 			// Simulate server latency with 2 second delay
-			setTimeout(() => resolve(this.getMockHeroes()), 2000);
+			setTimeout(() => resolve(this.getMockHeroesAsynService()), 2000);
 		});
 	}
 }

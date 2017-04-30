@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "ng2-scroll-to": "^1.0.7",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -31,7 +32,7 @@
     "@types/node": "~7.0.13",
     "codelyzer": "~3.0.0",
     "jasmine-core": "~2.6.1",
-    "jasmine-spec-reporter": "~4.0.0",
+    "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.6.0",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
