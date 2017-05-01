@@ -21,6 +21,10 @@ import { DetailComponent } from './master-detail/detail/detail.component';
 import { ShowHideComponent } from './simple-eg/show-hide/show-hide.component';
 import { ScrollToComponent } from './simple-eg/scroll-to/scroll-to.component';
 import { ScrollToModule } from 'ng2-scroll-to';
+import { ExamplesMenuComponent } from './examples-menu/examples-menu.component';
+import { ChildRouteComponent } from './simple-eg/child-route/child-route.component';
+import { ChildoneComponent } from './simple-eg/child-route/childone/childone.component';
+import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 
 @NgModule({
 	declarations: [
@@ -37,14 +41,18 @@ import { ScrollToModule } from 'ng2-scroll-to';
 		MasterComponent,
 		DetailComponent,
 		ShowHideComponent,
-		ScrollToComponent
+		ScrollToComponent,
+		ExamplesMenuComponent,
+		ChildRouteComponent,
+		ChildoneComponent,
+		ChildtwoComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
 		ScrollToModule.forRoot(),
-		ROUTING
+		ROUTING // routing CONST containing all routes to application
 		/*RouterModule.forRoot([
 			{ path: 'HerosList', component: HeroesComponent },
 			{ path: 'ShowHide', component: ShowHideComponent },

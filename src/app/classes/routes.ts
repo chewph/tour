@@ -17,20 +17,55 @@ import { DetailComponent } from '../master-detail/detail/detail.component';
 import { ShowHideComponent } from '../simple-eg/show-hide/show-hide.component';
 import { ScrollToComponent } from '../simple-eg/scroll-to/scroll-to.component';
 import { ScrollToModule } from 'ng2-scroll-to';
+import { ExamplesMenuComponent } from '../examples-menu/examples-menu.component';
+import { ChildRouteComponent } from '../simple-eg/child-route/child-route.component';
+import { ChildoneComponent } from '../simple-eg/child-route/childone/childone.component';
+import { ChildtwoComponent } from '../simple-eg/child-route/childtwo/childtwo.component';
+
 
 const ROUTES: Routes = [
-	{path: '', redirectTo: '/', pathMatch: 'full'},
-	{ path: 'HerosList', component: HeroesComponent },
-	{ path: 'ShowHide', component: ShowHideComponent },
-	{ path: 'GetComponentProperty', component: GetComponentPropertyComponent },
-	{ path: 'DoForLoop', component: ForloopEgComponent },
-	{ path: 'DoDataBind', component: BindPropertyComponent },
-	{ path: 'ClickMe', component: ClickMeComponent },
-	{ path: 'KeyupAnyEvent', component: KeyupComponent },
-	{ path: 'LoopBack', component: LoopbackComponent },
-	{ path: 'LittleTour', component: LittleTourComponent },
-	{ path: 'Master-Detail', component: MasterComponent },
-	{ path: 'ScrollTo', component: ScrollToComponent }
-];
+	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	{ path: 'TourOfHeroes', component: HeroesComponent },
+	{
+		path: 'ExamplesMenu', component: ExamplesMenuComponent,
+		children: [
+			{ path: '', redirectTo: '', pathMatch: 'full' },
+			{ path: 'HerosList', component: HeroesComponent },
+			{ path: 'ShowHide', component: ShowHideComponent },
+			{ path: 'GetComponentProperty', component: GetComponentPropertyComponent },
+			{ path: 'DoForLoop', component: ForloopEgComponent },
+			{ path: 'DoDataBind', component: BindPropertyComponent },
+			{ path: 'ClickMe', component: ClickMeComponent },
+			{ path: 'KeyupAnyEvent', component: KeyupComponent },
+			{ path: 'LoopBack', component: LoopbackComponent },
+			{ path: 'LittleTour', component: LittleTourComponent },
+			{ path: 'Master-Detail', component: MasterComponent },
+			{ path: 'ScrollTo', component: ScrollToComponent },
+			{
+				path: 'ChildRoute', component: ChildRouteComponent,
+				children: [
+					{ path: '', redirectTo: '', pathMatch: 'full' },
+					{ path: 'Childone', component: ChildoneComponent },
+					{ path: 'Childtwo', component: ChildtwoComponent },
+				]
+			}
+		]
+	}
+]
+
+/*{ path: 'HerosList', component: HeroesComponent },
+ { path: 'ShowHide',  component: ShowHideComponent },
+ { path: 'GetComponentProperty', component: GetComponentPropertyComponent },
+ { path: 'DoForLoop', component: ForloopEgComponent },
+ { path: 'DoDataBind', component: BindPropertyComponent },
+ { path: 'ClickMe', component: ClickMeComponent },
+ { path: 'KeyupAnyEvent', component: KeyupComponent },
+ { path: 'LoopBack', component: LoopbackComponent },
+ { path: 'LittleTour', component: LittleTourComponent },
+ { path: 'Master-Detail', component: MasterComponent },
+ { path: 'ScrollTo', component: ScrollToComponent },
+ { path: 'ExamplesMenu', component: ExamplesMenuComponent }*/
+
+
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
