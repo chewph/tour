@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../classes/hero';
 import { KeyupComponent } from "../user-input/keyup/keyup.component";
 import { Heroine } from "../classes/heroine";
-import { HEROS_DATA } from '../classes/mock-heroes';
+import { HEROS_DATA } from '../classes/heroes';
 import { HeroService } from '../hero.service';
 
 
@@ -10,7 +10,6 @@ import { HeroService } from '../hero.service';
 	selector: 'my-heroes',
 	templateUrl: 'heroes.component.html',
 	styleUrls: [ 'heroes.component.css' ],
-	providers: [HeroService]
 })
 export class HeroesComponent implements OnInit{
 	mockHeroes: Hero[]; // could be: mockHeroes = this.heroService.getMockHeroesAsynService();
@@ -25,9 +24,9 @@ export class HeroesComponent implements OnInit{
 
 	ngOnInit(): void{
 		// choose to use heros or mockHeroes
-		this.getMockHeroes();
+		//this.getMockHeroes();
 		//this.getHeros();
-		//this.getHerosAsyn();
+		this.getHerosAsyn();
 	}
 
 	getMockHeroes(): void {

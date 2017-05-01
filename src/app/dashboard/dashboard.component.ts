@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { Hero } from '../classes/hero';
+import { HeroService } from '../hero.service';
+
+@Component({
+  selector: 'dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
+})
+export class DashboardComponent implements OnInit {
+	heroes: Hero[] = [];
+
+	constructor(private heroService: HeroService) { }
+
+	ngOnInit(): void {
+		this.heroService.getHerosAsynService()
+		.then(heroes => this.heroes = heroes.slice(1, 5));
+		//specify four heroes (2nd, 3rd, 4th, and 5th) with the Array.slice method.
+	}
+
+}

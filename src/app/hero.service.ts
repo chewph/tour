@@ -1,6 +1,6 @@
 import  { Injectable } from '@angular/core';
 import { Hero } from './classes/hero';
-import { HEROS_DATA } from './classes/mock-heroes';
+import { HEROS_DATA } from './classes/heroes';
 
 
 /*
@@ -30,6 +30,11 @@ export class HeroService{
 	getHeros(): Hero[]{
 		// or return HEROS_DATA;
 		return this.heros;
+	}
+
+	getHero(id: number): Promise<Hero> {
+		return this.getHerosAsynService()
+		.then(heroes => heroes.find(hero => hero.id === id));
 	}
 
 	getHeroesSlowly(): Promise<Hero[]>{

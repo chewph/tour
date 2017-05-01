@@ -25,6 +25,7 @@ import { ExamplesMenuComponent } from './examples-menu/examples-menu.component';
 import { ChildRouteComponent } from './simple-eg/child-route/child-route.component';
 import { ChildoneComponent } from './simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
 	declarations: [
@@ -45,7 +46,8 @@ import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.com
 		ExamplesMenuComponent,
 		ChildRouteComponent,
 		ChildoneComponent,
-		ChildtwoComponent
+		ChildtwoComponent,
+		DashboardComponent
 	],
 	imports: [
 		BrowserModule,

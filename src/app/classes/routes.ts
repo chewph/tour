@@ -21,11 +21,14 @@ import { ExamplesMenuComponent } from '../examples-menu/examples-menu.component'
 import { ChildRouteComponent } from '../simple-eg/child-route/child-route.component';
 import { ChildoneComponent } from '../simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from '../simple-eg/child-route/childtwo/childtwo.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 
 const ROUTES: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	{ path: '', redirectTo: '/Dashboard', pathMatch: 'full' },
 	{ path: 'TourOfHeroes', component: HeroesComponent },
+	{ path: 'detail/:id',component: HeroDetailComponent },
+	{ path: 'Dashboard', component: DashboardComponent },
 	{
 		path: 'ExamplesMenu', component: ExamplesMenuComponent,
 		children: [
@@ -65,7 +68,6 @@ const ROUTES: Routes = [
  { path: 'Master-Detail', component: MasterComponent },
  { path: 'ScrollTo', component: ScrollToComponent },
  { path: 'ExamplesMenu', component: ExamplesMenuComponent }*/
-
 
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
