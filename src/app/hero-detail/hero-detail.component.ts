@@ -14,6 +14,7 @@ import 'rxjs/add/operator/switchMap';
 export class HeroDetailComponent implements OnInit{
 	@Input('heroesArrInput') heroesDetailArr: Hero;
 	@Input('heroDetailInput') heroDetail: Hero;
+	// Passed from <hero-detail [heroDetailInput]="selectedHero"></hero-detail>
 
 	constructor(private heroService: HeroService,
 			  private route: ActivatedRoute,

@@ -70,6 +70,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 		])*/
 	],
 	providers: [ HeroService ],
+	// singleton HeroService instance, available to all components of the app
 	bootstrap: [ AppComponent ]
 })
 export class AppModule{

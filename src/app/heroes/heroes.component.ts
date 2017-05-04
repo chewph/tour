@@ -5,7 +5,14 @@ import { Heroine } from "../classes/heroine";
 import { HEROS_DATA } from '../classes/heroes';
 import { HeroService } from '../hero.service';
 
+/*
+* While the details of a selected hero displays at the bottom of the HeroesComponent,
+* users should be able to navigate to the HeroDetailComponent in the following additional ways:
 
+ - From the dashboard to a selected hero.
+ - From the heroes list to a selected hero.
+ - From a "deep link" URL pasted into the browser address bar.
+ */
 @Component({
 	selector: 'my-heroes',
 	templateUrl: 'heroes.component.html',
