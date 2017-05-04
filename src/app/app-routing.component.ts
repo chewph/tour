@@ -1,10 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-
-import { ROUTING } from './classes/routes';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ClickMeComponent } from './user-input/clickme/clickme.component';
 import { KeyupComponent } from './user-input/keyup/keyup.component';
@@ -26,38 +21,19 @@ import { ChildRouteComponent } from './simple-eg/child-route/child-route.compone
 import { ChildoneComponent } from './simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AppRoutingComponent } from './app-routing.component';
 
-@NgModule({
-	declarations: [
-		AppComponent,
-		ClickMeComponent,
-		KeyupComponent,
-		LoopbackComponent,
-		LittleTourComponent,
-		HeroDetailComponent,
-		HeroesComponent,
-		GetComponentPropertyComponent,
-		ForloopEgComponent,
-		BindPropertyComponent,
-		MasterComponent,
-		DetailComponent,
-		ShowHideComponent,
-		ScrollToComponent,
-		ExamplesMenuComponent,
-		ChildRouteComponent,
-		ChildoneComponent,
-		ChildtwoComponent,
-		DashboardComponent,
-		AppRoutingComponent
-	],
-	imports: [
-		BrowserModule,
-		FormsModule,
-		HttpModule,
-		ScrollToModule.forRoot(),
-		ROUTING // routing CONST containing all routes to application
-		/*RouterModule.forRoot([
+import { NgModule } from '@angular/core';
+
+
+const ROUTES: Routes = [
+	{ path: '', redirectTo: '/Dashboard', pathMatch: 'full' },
+	{ path: 'TourOfHeroes', component: HeroesComponent },
+	{ path: 'detail/:id',component: HeroDetailComponent },
+	{ path: 'Dashboard', component: DashboardComponent },
+	{
+		path: 'ExamplesMenu', component: ExamplesMenuComponent,
+		children: [
+			{ path: '', redirectTo: '', pathMatch: 'full' },
 			{ path: 'HerosList', component: HeroesComponent },
 			{ path: 'ShowHide', component: ShowHideComponent },
 			{ path: 'GetComponentProperty', component: GetComponentPropertyComponent },
@@ -68,38 +44,23 @@ import { AppRoutingComponent } from './app-routing.component';
 			{ path: 'LoopBack', component: LoopbackComponent },
 			{ path: 'LittleTour', component: LittleTourComponent },
 			{ path: 'Master-Detail', component: MasterComponent },
-			{ path: 'ScrollTo', component: ScrollToComponent }
-		])*/
-	],
-	providers: [ HeroService ],
-	// singleton HeroService instance, available to all components of the app
-	bootstrap: [ AppComponent ]
+			{ path: 'ScrollTo', component: ScrollToComponent },
+			{
+				path: 'ChildRoute', component: ChildRouteComponent,
+				children: [
+					{ path: '', redirectTo: '', pathMatch: 'full' },
+					{ path: 'Childone', component: ChildoneComponent },
+					{ path: 'Childtwo', component: ChildtwoComponent },
+				]
+			}
+		]
+	}
+]
+
+@NgModule({
+	imports: [ RouterModule.forRoot(ROUTES) ],
+	exports: [ RouterModule ]
 })
-export class AppModule{
+export class AppRoutingModule{
 }
 
-/*
- const routes: Routes = [
- // basic routes
- { path: '', redirectTo: 'home', pathMatch: 'full' },
- { path: 'home', component: HomeComponent },
- { path: 'about', component: AboutComponent },
- { path: 'contact', component: ContactComponent },
- { path: 'contactus', redirectTo: 'contact' },
-
- // authentication demo
- { path: 'login', component: LoginComponent },
- {
- path: 'protected',
- component: ProtectedComponent,
- canActivate: [ LoggedInGuard ]
- },
-
- // nested
- {
- path: 'products',
- component: ProductsComponent,
- children: childRoutes
- }
- ];
- */

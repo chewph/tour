@@ -70,4 +70,4 @@ const ROUTES: Routes = [
  { path: 'ExamplesMenu', component: ExamplesMenuComponent }*/
 
 
-export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
+//export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
