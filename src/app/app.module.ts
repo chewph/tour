@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { ROUTING } from './classes/routes';
 import { AppComponent } from './app.component';
 import { ClickMeComponent } from './user-input/clickme/clickme.component';
 import { KeyupComponent } from './user-input/keyup/keyup.component';
@@ -26,7 +25,7 @@ import { ChildRouteComponent } from './simple-eg/child-route/child-route.compone
 import { ChildoneComponent } from './simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AppRoutingComponent } from './app-routing.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
 	declarations: [
@@ -49,27 +48,13 @@ import { AppRoutingComponent } from './app-routing.component';
 		ChildoneComponent,
 		ChildtwoComponent,
 		DashboardComponent,
-		AppRoutingComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
 		ScrollToModule.forRoot(),
-		ROUTING // routing CONST containing all routes to application
-		/*RouterModule.forRoot([
-			{ path: 'HerosList', component: HeroesComponent },
-			{ path: 'ShowHide', component: ShowHideComponent },
-			{ path: 'GetComponentProperty', component: GetComponentPropertyComponent },
-			{ path: 'DoForLoop', component: ForloopEgComponent },
-			{ path: 'DoDataBind', component: BindPropertyComponent },
-			{ path: 'ClickMe', component: ClickMeComponent },
-			{ path: 'KeyupAnyEvent', component: KeyupComponent },
-			{ path: 'LoopBack', component: LoopbackComponent },
-			{ path: 'LittleTour', component: LittleTourComponent },
-			{ path: 'Master-Detail', component: MasterComponent },
-			{ path: 'ScrollTo', component: ScrollToComponent }
-		])*/
+		AppRoutingModule // routing CONST containing all routes to application
 	],
 	providers: [ HeroService ],
 	// singleton HeroService instance, available to all components of the app

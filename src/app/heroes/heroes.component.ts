@@ -4,6 +4,7 @@ import { KeyupComponent } from "../user-input/keyup/keyup.component";
 import { Heroine } from "../classes/heroine";
 import { HEROS_DATA } from '../classes/heroes';
 import { HeroService } from '../hero.service';
+import { Router } from '@angular/router';
 
 /*
 * While the details of a selected hero displays at the bottom of the HeroesComponent,
@@ -24,7 +25,9 @@ export class HeroesComponent implements OnInit{
 	selectedHero:  Hero;
 	heroesArr = HEROES;
 
-	constructor(private heroService: HeroService){
+	constructor(
+		private router: Router,
+		private heroService: HeroService){
 		//this.heroes = ['Windstorm', 'Superman', 'Batman', 'Fronzon', 'Spiderman'];
 
 	}
@@ -55,9 +58,9 @@ export class HeroesComponent implements OnInit{
 		this.selectedHero = hero;
 	}
 
-/*	gotoDetail(): void {
+	gotoDetail(): void {
 		this.router.navigate(['/detail', this.selectedHero.id]);
-	}*/
+	}
 
 }
 
