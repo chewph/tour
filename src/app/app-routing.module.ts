@@ -21,6 +21,7 @@ import { ChildRouteComponent } from './simple-eg/child-route/child-route.compone
 import { ChildoneComponent } from './simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
 
 import { NgModule } from '@angular/core';
 
@@ -44,6 +45,7 @@ const ROUTES: Routes = [
 			{ path: 'LoopBack', component: LoopbackComponent },
 			{ path: 'LittleTour', component: LittleTourComponent },
 			{ path: 'Master-Detail', component: MasterComponent },
+			{ path: 'HeroForm', component: HeroFormComponent },
 			{ path: 'ScrollTo', component: ScrollToComponent },
 			{
 				path: 'ChildRoute', component: ChildRouteComponent,
