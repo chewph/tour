@@ -26,6 +26,7 @@ import { ChildoneComponent } from './simple-eg/child-route/childone/childone.com
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
 
 @NgModule({
 	declarations: [
@@ -48,6 +49,7 @@ import { AppRoutingModule } from './app-routing.module';
 		ChildoneComponent,
 		ChildtwoComponent,
 		DashboardComponent,
+		HeroFormComponent,
 	],
 	imports: [
 		BrowserModule,
