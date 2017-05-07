@@ -10,7 +10,6 @@ import { HEROS_DATA } from './classes/heroes';
  */
 
 @Injectable()
-
 export class HeroService{
 	heros : Hero[] = HEROS_DATA;
 

@@ -27,6 +27,7 @@ import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.com
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
+import { LoggerService } from "./logger/logger.service";
 
 @NgModule({
 	declarations: [
@@ -58,8 +59,12 @@ import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
 		ScrollToModule.forRoot(),
 		AppRoutingModule // routing CONST containing all routes to application
 	],
-	providers: [ HeroService ],
-	// singleton HeroService instance, available to all components of the app
+
+	/*
+	 You can either register a provider within an NgModule or in application components.
+	 Singleton HeroService instance, available to all components of the app
+	 */
+	providers: [ HeroService, LoggerService ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule{
