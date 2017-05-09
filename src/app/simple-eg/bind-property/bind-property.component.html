@@ -7,3 +7,19 @@
 	<input  (keyup)="printHeroName()"
 		   [(ngModel)]="anotherHero.name" placeholder="name">
 </div>
+
+<!--
+	You often have a choice between interpolation and property binding. The following binding pairs
+	do the same thing:
+
+	<p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
+	<p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>
+
+	<p><span>"{{title}}" is the <i>interpolated</i> title.</span></p>
+	<p>"<span [innerHTML]="title"></span>" is the <i>property bound</i> title.</p>
+
+	Interpolation is a convenient alternative to property binding in many cases.
+
+	When setting an element property to a non-string data value, you must use property binding.
+
+-->

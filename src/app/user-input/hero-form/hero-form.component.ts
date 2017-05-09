@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
+import { LoggerService } from '../../logger/logger.service';
+import { Optional } from '@angular/core';
 
 @Component({
 	selector: 'hero-form',
@@ -8,7 +10,7 @@ import { Hero } from './hero';
 })
 export class HeroFormComponent implements OnInit{
 
-	constructor(){
+	constructor(@Optional() private logger: LoggerService){
 	}
 
 	ngOnInit(){
@@ -22,6 +24,7 @@ export class HeroFormComponent implements OnInit{
 
 	onSubmit() {
 		this.submitted = true;
+		this.logger.log("onSubmitted");
 	}
 
 	newHero() {

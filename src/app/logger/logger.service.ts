@@ -6,7 +6,7 @@ export class LoggerService{
 	logs: string[];
 
 	log (message: string){
-		this.logs.push(message);
+		//this.logs.push(message);
 		console.log(message);
 	}
 
