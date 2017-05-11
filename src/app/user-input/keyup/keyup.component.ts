@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Hero } from  '../../classes/hero';
 import { LoggerService } from '../../logger/logger.service';
+import { HeroDetailComponent } from '../../hero-detail/hero-detail.component';
 
 @Component({
 	selector: 'keyup',
@@ -8,18 +9,8 @@ import { LoggerService } from '../../logger/logger.service';
 	styleUrls: [ './keyup.component.css' ]
 })
 export class KeyupComponent {
-	currentHero = new Hero( 47, 'My New Hero');
+	currentHero = new Hero( 47, 'My Hero from KeyupComponent');
 	values = '';
-
-	deleteRequest = new EventEmitter<Hero>();
-
-	deleteHero(event: any){
-		console.log(event.target.value);
-	}
-
-	del(){
-		this.deleteRequest.emit(this.currentHero);
-	}
 
 	constructor(private logger: LoggerService){
 

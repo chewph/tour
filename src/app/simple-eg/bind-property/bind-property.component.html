@@ -6,6 +6,9 @@
 	<label>name: </label>
 	<input  (keyup)="printHeroName()"
 		   [(ngModel)]="anotherHero.name" placeholder="name">
+	<br>
+	<label>name in uppercase:</label>
+	<input  [ngModel]="anotherHero.name" (ngModelChange)="setUppercaseName($event)">
 </div>
 
 <!--

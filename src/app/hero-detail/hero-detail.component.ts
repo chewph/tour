@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import { HeroService } from '../hero.service';
@@ -16,9 +16,24 @@ export class HeroDetailComponent implements OnInit{
 	@Input('heroDetailInput') heroDetail: Hero;
 	// Passed from <hero-detail [heroDetailInput]="selectedHero"></hero-detail>
 
+	@Input('heroToDelInput') heroToDel: Hero;
+
+	deleteRequest = new EventEmitter<Hero>();
+
 	constructor(private heroService: HeroService,
 			  private route: ActivatedRoute,
 			  private location: Location){
+	}
+
+	deleteEvent(){
+		this.deleteRequest.emit(this.heroToDel);
+		console.log('deleteEvent() fired emitting: ' + this.heroToDel.name);
+		console.log(this.heroToDel);
+	}
+
+	deleteHero(event: any){
+		console.log('deleteHero() fired!');
+		//console.log(event.target.value);
 	}
 
 	ngOnInit(){

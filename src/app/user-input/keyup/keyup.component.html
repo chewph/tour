@@ -1,14 +1,9 @@
 <p>
 	<input (keyup)="onKey($event)">: <input value="{{values}}">
 	<br>
-	<button (click)="del()">Delete</button>
 
+	<hero-detail (deleteRequest)="deleteHero($event)" [heroToDelInput]="currentHero"></hero-detail>
 
-	<!--
-		Don't know input event behaviour
-		<input [value]="currentHero.name"
-		  (input)="onClick();currentHero.name=$event.target.value">-->
-	<!--(input)="currentHero.name=$event.target.value"-->
 
 
 </p>

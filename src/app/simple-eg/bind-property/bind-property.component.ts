@@ -18,8 +18,15 @@ export class BindPropertyComponent implements OnInit{
 	ngOnInit(){
 	}
 
+	setUppercaseName(name: string){
+		console.log('setUppercaseName fired :' + this.anotherHero.name);
+		this.anotherHero.name = name.toUpperCase();
+		console.log(this.anotherHero.name );
+	}
+
+
 	printHeroName(){
-		console.log(this.anotherHero.name);
+		console.log('Print Hero name: ' + this.anotherHero.name);
 	}
 
 }
