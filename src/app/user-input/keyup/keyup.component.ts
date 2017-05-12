@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from  '../../classes/hero';
 import { LoggerService } from '../../logger/logger.service';
-import { HeroDetailComponent } from '../../hero-detail/hero-detail.component';
+import { HeroDetailEventBindingComponent } from "../../hero-detail/hero-detail-event-binding/hero-detail-event-binding.component";
 
 @Component({
 	selector: 'keyup',
@@ -9,7 +9,7 @@ import { HeroDetailComponent } from '../../hero-detail/hero-detail.component';
 	styleUrls: [ './keyup.component.css' ]
 })
 export class KeyupComponent {
-	currentHero = new Hero( 47, 'My Hero from KeyupComponent');
+	currentHero = new Hero( 47, 'Hero to delete');
 	values = '';
 
 	constructor(private logger: LoggerService){

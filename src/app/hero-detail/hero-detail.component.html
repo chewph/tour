@@ -7,13 +7,6 @@
 	<button (click)="goBack()">Back</button>
 </div>
 
-<div *ngIf="heroToDel">
-	<h3>Hero To Delete</h3>
-	<span [style.text-decoration]="lineThrough">
-     {{heroToDel.name}}
-  </span>
-	<button (click)="deleteEvent()">Delete</button>
-</div>
 
 <!--<div *ngIf="heroesDetailArr">
 	<h3>Passed from heroesArr of HeroesComponent</h3>

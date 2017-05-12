@@ -28,6 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
 import { LoggerService } from "./logger/logger.service";
+import { HeroDetailEventBindingComponent } from './hero-detail/hero-detail-event-binding/hero-detail-event-binding.component';
+import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/big-hero-detail.component';
 
 @NgModule({
 	declarations: [
@@ -51,6 +53,8 @@ import { LoggerService } from "./logger/logger.service";
 		ChildtwoComponent,
 		DashboardComponent,
 		HeroFormComponent,
+		HeroDetailEventBindingComponent,
+		BigHeroDetailComponent,
 	],
 	imports: [
 		BrowserModule,

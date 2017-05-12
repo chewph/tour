@@ -9,32 +9,20 @@ import 'rxjs/add/operator/switchMap';
 @Component({
 	selector: 'hero-detail',
 	templateUrl: './hero-detail.component.html',
-	styleUrls: [ './hero-detail.component.css' ]
+	styleUrls: [ './hero-detail.component.css' ],
+
 })
 export class HeroDetailComponent implements OnInit{
 	@Input('heroesArrInput') heroesDetailArr: Hero;
 	@Input('heroDetailInput') heroDetail: Hero;
 	// Passed from <hero-detail [heroDetailInput]="selectedHero"></hero-detail>
 
-	@Input('heroToDelInput') heroToDel: Hero;
-
-	deleteRequest = new EventEmitter<Hero>();
 
 	constructor(private heroService: HeroService,
 			  private route: ActivatedRoute,
 			  private location: Location){
 	}
 
-	deleteEvent(){
-		this.deleteRequest.emit(this.heroToDel);
-		console.log('deleteEvent() fired emitting: ' + this.heroToDel.name);
-		console.log(this.heroToDel);
-	}
-
-	deleteHero(event: any){
-		console.log('deleteHero() fired!');
-		//console.log(event.target.value);
-	}
 
 	ngOnInit(){
 		this.route.params

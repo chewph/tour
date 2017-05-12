@@ -1,9 +1,8 @@
 <p>
+	Keyup event:
 	<input (keyup)="onKey($event)">: <input value="{{values}}">
 	<br>
-
-	<hero-detail (deleteRequest)="deleteHero($event)" [heroToDelInput]="currentHero"></hero-detail>
-
-
+	Not working:
+	<hero-detail-event-binding (deleteRequest)="deleteHero($event)" [hero]="currentHero"></hero-detail-event-binding>
 
 </p>
