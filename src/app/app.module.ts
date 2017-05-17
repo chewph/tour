@@ -30,6 +30,7 @@ import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
 import { LoggerService } from "./logger/logger.service";
 import { HeroDetailEventBindingComponent } from './hero-detail/hero-detail-event-binding/hero-detail-event-binding.component';
 import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/big-hero-detail.component';
+import { HighlightDirective } from './simple-eg/hightlight-directive/highlight.directive';
 
 @NgModule({
 	declarations: [
@@ -55,6 +56,7 @@ import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/
 		HeroFormComponent,
 		HeroDetailEventBindingComponent,
 		BigHeroDetailComponent,
+		HighlightDirective,
 	],
 	imports: [
 		BrowserModule,

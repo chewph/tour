@@ -18,6 +18,7 @@ import { GetComponentPropertyComponent } from './simple-eg/get-component-propert
 })
 export class AppComponent{
 	appName: string;
+	color: string;
 
 	constructor(){
 		this.appName = 'Tour of Heroes Tutorial';
