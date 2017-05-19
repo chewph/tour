@@ -11,3 +11,5 @@ export const HEROS_DATA: Hero[] = [
 	{id: 15, name: 'Magneta'},
 	{id: 16, name: 'RubberMan'},
 ];
+
+export const myHero: Hero = {id: 5, name:'Test'};
