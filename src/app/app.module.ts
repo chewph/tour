@@ -31,6 +31,8 @@ import { LoggerService } from "./logger/logger.service";
 import { HeroDetailEventBindingComponent } from './hero-detail/hero-detail-event-binding/hero-detail-event-binding.component';
 import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/big-hero-detail.component';
 import { HighlightDirective } from './simple-eg/hightlight-directive/highlight.directive';
+import { ParentComponent } from './simple-eg/input-output/parent.component';
+import { ChildComponent } from './simple-eg/input-output/child.component';
 
 @NgModule({
 	declarations: [
@@ -57,6 +59,8 @@ import { HighlightDirective } from './simple-eg/hightlight-directive/highlight.d
 		HeroDetailEventBindingComponent,
 		BigHeroDetailComponent,
 		HighlightDirective,
+		ParentComponent,
+		ChildComponent,
 	],
 	imports: [
 		BrowserModule,

@@ -22,6 +22,8 @@ import { ChildRouteComponent } from '../simple-eg/child-route/child-route.compon
 import { ChildoneComponent } from '../simple-eg/child-route/childone/childone.component';
 import { ChildtwoComponent } from '../simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { ParentComponent } from '../simple-eg/input-output/parent.component'
+import { ChildComponent } from '../simple-eg/input-output/child.component'
 
 
 const ROUTES: Routes = [
@@ -44,6 +46,7 @@ const ROUTES: Routes = [
 			{ path: 'LittleTour', component: LittleTourComponent },
 			{ path: 'Master-Detail', component: MasterComponent },
 			{ path: 'ScrollTo', component: ScrollToComponent },
+			/*{ path: 'Input-Output', component: ParentComponent },*/
 			{
 				path: 'ChildRoute', component: ChildRouteComponent,
 				children: [

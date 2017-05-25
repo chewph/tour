@@ -22,6 +22,8 @@ import { ChildoneComponent } from './simple-eg/child-route/childone/childone.com
 import { ChildtwoComponent } from './simple-eg/child-route/childtwo/childtwo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroFormComponent } from './user-input/hero-form/hero-form.component';
+import { ParentComponent } from './simple-eg/input-output/parent.component'
+import { ChildComponent } from './simple-eg/input-output/child.component'
 
 import { NgModule } from '@angular/core';
 
@@ -47,6 +49,7 @@ const ROUTES: Routes = [
 			{ path: 'Master-Detail', component: MasterComponent },
 			{ path: 'HeroForm', component: HeroFormComponent },
 			{ path: 'ScrollTo', component: ScrollToComponent },
+			{ path: 'Input-Output', component: ParentComponent },
 			{
 				path: 'ChildRoute', component: ChildRouteComponent,
 				children: [

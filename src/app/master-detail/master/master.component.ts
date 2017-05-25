@@ -18,11 +18,9 @@ export class MasterComponent implements OnInit {
 
 	constructor(){
 		//this.heroes = ['Windstorm', 'Superman', 'Batman', 'Fronzon', 'Spiderman'];
-
 	}
 
 	ngOnInit(): void{
-
 	}
 
 	onSelectShowLittleTour(){
@@ -34,6 +32,7 @@ export class MasterComponent implements OnInit {
 		}
 
 	}
+
 	onSelect(hero: Hero): void {
 		this.selectedHero = hero;
 	}

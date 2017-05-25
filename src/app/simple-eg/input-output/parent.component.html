@@ -1,0 +1,8 @@
+<h2>Parent component</h2>
+
+<label>Enter Parent value:</label>
+
+<input type="text" #parentText (keyup)="0" >
+
+<child-component [parentData]="parentText.value"></child-component>
+
