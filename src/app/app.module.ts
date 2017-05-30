@@ -33,6 +33,7 @@ import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/
 import { HighlightDirective } from './simple-eg/hightlight-directive/highlight.directive';
 import { ParentComponent } from './simple-eg/input-output/parent.component';
 import { ChildComponent } from './simple-eg/input-output/child.component';
+import { TemplateDrivenFormComponent } from './codevolution/template-driven-form/template-driven-form.component';
 
 @NgModule({
 	declarations: [
@@ -61,6 +62,7 @@ import { ChildComponent } from './simple-eg/input-output/child.component';
 		HighlightDirective,
 		ParentComponent,
 		ChildComponent,
+		TemplateDrivenFormComponent,
 	],
 	imports: [
 		BrowserModule,
