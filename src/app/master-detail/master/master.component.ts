@@ -8,7 +8,25 @@ import { HEROS_DATA } from '../../classes/heroes';
 
 @Component({
   selector: 'app-master',
-  templateUrl: './master.component.html',
+  template: `
+	  <h2>My Heroes using Master (list) - Detail (record)</h2>
+	  <h3>Master - MasterComponent</h3>
+	  <input type="checkbox" (change)="onSelectShowLittleTour()">Show Little Tour
+	  <ul class="heroes">
+		  <li *ngFor="let hero of heroesArr" (click)="onSelect(hero)"
+			 [class.selected]="hero === selectedHero">
+			  <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+		  </li>
+	  </ul>
+
+	  <!--<hero-detail [heroesArrInput]="heroesArr"></hero-detail>-->
+	  <detail [heroDetailInput]="selectedHero"></detail>
+	  <hr>
+	  <div *ngIf="showLittleTour">
+		  <!--heroesArr from MasterComponent-->
+		  <little-tour [heroesArrInput]="heroesArr">Passing selected Hero to LittleHero</little-tour>
+	  </div>
+  `,
   styleUrls: ['./master.component.css']
 })
 export class MasterComponent implements OnInit {

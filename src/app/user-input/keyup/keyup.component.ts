@@ -6,7 +6,6 @@ import { HeroDetailEventBindingComponent } from "../../hero-detail/hero-detail-e
 @Component({
 	selector: 'keyup',
 	templateUrl: './keyup.component.html',
-	styleUrls: [ './keyup.component.css' ]
 })
 export class KeyupComponent {
 	currentHero = new Hero( 47, 'Hero to delete');

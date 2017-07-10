@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'child-component',
-	templateUrl: './child.component.html',
-	styleUrls: [ './child.component.css' ],
+	template: `<h2>Child component</h2>
+
+			<p>Value from parent component</p>{{ parentData }}`,
 	inputs: [ 'parentData' ]
 
 })

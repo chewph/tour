@@ -33,7 +33,6 @@ import { BigHeroDetailComponent } from './hero-detail/hero-detail-event-binding/
 import { HighlightDirective } from './simple-eg/hightlight-directive/highlight.directive';
 import { ParentComponent } from './simple-eg/input-output/parent.component';
 import { ChildComponent } from './simple-eg/input-output/child.component';
-import { TemplateDrivenFormComponent } from './codevolution/template-driven-form/template-driven-form.component';
 import { HttpClientComponent } from './http-client/http-client.component';
 import { HeroListComponent } from './http-client/hero-list.component';
 
@@ -64,7 +63,6 @@ import { HeroListComponent } from './http-client/hero-list.component';
 		HighlightDirective,
 		ParentComponent,
 		ChildComponent,
-		TemplateDrivenFormComponent,
 		HttpClientComponent,
 		HeroListComponent,
 	],

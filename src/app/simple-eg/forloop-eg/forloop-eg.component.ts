@@ -4,7 +4,6 @@ import { Hero } from '../../classes/hero';
 @Component({
 	selector: 'app-forloop-eg',
 	templateUrl: './forloop-eg.component.html',
-	styleUrls: [ './forloop-eg.component.css' ]
 })
 export class ForloopEgComponent implements OnInit{
 

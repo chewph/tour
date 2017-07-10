@@ -4,8 +4,10 @@ import { Heroine } from '../../classes/heroine';
 
 @Component({
 	selector: 'app-get-component-property',
-	templateUrl: './get-component-property.component.html',
-	styleUrls: [ './get-component-property.component.css' ]
+	template: `My favourite hero is: {{ myHero.name }}
+			<br>
+			<!--heroine from heroine: Heroine-->
+			My Heroine is: {{ heroine.name }}`,
 })
 export class GetComponentPropertyComponent implements OnInit{
 	myHero: Hero;

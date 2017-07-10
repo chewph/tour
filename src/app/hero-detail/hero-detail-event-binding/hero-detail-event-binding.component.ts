@@ -5,8 +5,15 @@ import { Hero } from  '../../classes/hero';
 	selector: 'hero-detail-event-binding',
 	inputs: [ 'hero' ],
 	outputs: [ 'deleteRequest' ],
-	templateUrl: './hero-detail-event-binding.component.html',
-	styleUrls: [ './hero-detail-event-binding.component.css' ]
+	template: `
+		<div>
+			<span [style.text-decoration]="lineThrough">
+			  {{currentHero?.name}}
+		    </span>
+			<button (click)="delete()">Delete</button>
+		</div>
+	`,
+	/*styleUrls: [ './hero-detail-event-binding.component.css' ]*/
 })
 
 export class HeroDetailEventBindingComponent{

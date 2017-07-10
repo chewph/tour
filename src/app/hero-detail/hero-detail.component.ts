@@ -8,7 +8,25 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
 	selector: 'hero-detail',
-	templateUrl: './hero-detail.component.html',
+	template: `<div *ngIf="heroDetail">
+				<h3>Hero Detail</h3>
+				<div><label>id: </label>{{ heroDetail.id }}</div>
+				<div><label>name: </label>
+					<input [(ngModel)]="heroDetail.name" placeholder="name">
+				</div>
+				<button (click)="goBack()">Back</button>
+			</div>
+
+
+	<!--<div *ngIf="heroesDetailArr">
+		<h3>Passed from heroesArr of HeroesComponent</h3>
+		<ul>
+			<li *ngFor="let hero of heroesDetailArr">
+				{{ hero.id }} {{ hero.name }}
+			</li>
+		</ul>
+	</div>-->
+	`,
 	styleUrls: [ './hero-detail.component.css' ],
 
 })

@@ -9,7 +9,6 @@ import { GetComponentPropertyComponent } from '../simple-eg/get-component-proper
 @Component({
 	selector: 'examples-menu',
 	templateUrl: './examples-menu.component.html',
-	styleUrls: [ './examples-menu.component.css' ],
 })
 export class ExamplesMenuComponent implements OnInit{
 

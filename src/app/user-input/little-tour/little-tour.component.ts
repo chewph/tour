@@ -4,8 +4,28 @@ import { Hero } from "../../classes/hero";
 
 @Component({
 	selector: 'little-tour',
-	templateUrl: './little-tour.component.html',
-	styleUrls: [ './little-tour.component.css' ]
+	template: `<h3>{{ className }}</h3>
+				<!--heroDetail is passed as input from MasterComponent's html template-->
+				<div *ngIf="heroesDetailArr">
+					From MasterComponent's herosArr property via 
+					template little-tour [heroesArrInput]="heroesArr" directive
+					<ul>
+						<li *ngFor="let h of heroesDetailArr">
+							{{ h.id }} {{ h.name }}
+						</li>
+					</ul>
+				</div>
+
+				<input #newHeroine Heroine.value); newHeroine.value='' "
+					  (blur)="addHeroine(newHeroine.value); newHeroine.value='' ">
+				
+				<button (click)="addHeroine(newHeroine.value)">Add</button>
+				<ul>
+					<li *ngFor="let h of heroines">
+						{{ h.id }}
+						{{ h.name }}
+					</li>
+				</ul>`,
 })
 export class LittleTourComponent implements OnInit{
 	//@Input('heroDetailInput') heroDetail: Hero;
